@@ -25,7 +25,8 @@ void XMLPrintCmd::cancel()
 
 void XMLPrintCmd::execute()
 {
-	// A COMPLETER
 	//		- Construire un visiteur d'ecriture en XML
 	//		- Appliquer le visiteur sur l'objet
+	VisitorXMLWriter visXML = VisitorXMLWriter(std::cout);
+	m_obj3d.accept(visXML);
 }
